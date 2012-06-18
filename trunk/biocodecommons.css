@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ul{margin-top:0;}
+	
+#one-true { 
+    overflow: hidden; 
+    max-width:1200px;
+}
+
+#one-true .col, two-true .col {
+    width: 27%;
+    padding: 30px 3.15% 0;
+    float: left;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+	height: 200px;
+	overflow:auto;
+}
+
+#one-true .col:nth-child(1) { margin-left: 33.3%; background: #ccc; }
+#one-true .col:nth-child(2) { margin-left: -66.3%; background: #eee; }
+#one-true .col:nth-child(3) { left: 0; background: #eee; }
+#one-true p { margin-bottom: 30px; } /* Bottom padding on col is busy */
+
+#two-true { 
+    overflow: hidden; 
+    max-width:1200px;
+}
+
+#two-true .col {
+    width: 27%;
+    padding: 30px 3.15% 0;
+    float: left;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+	height: 200px;
+	overflow:auto;
+}
+
+#two-true .col:nth-child(1) { margin-left: 33.3%; background: #eee; }
+#two-true .col:nth-child(2) { margin-left: -66.3%; background: #ccc; }
+#two-true .col:nth-child(3) { left: 0; background: #ccc; }
+#two-true p { margin-bottom: 30px; } /* Bottom padding on col is busy */
+
+body {
+	background-image:url('draft.png');
+	max-width:1200px;}
