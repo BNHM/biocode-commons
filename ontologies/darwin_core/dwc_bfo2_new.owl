@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
+
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
@@ -26,7 +27,7 @@ stefan.schulz@medunigraz.at</dc:creator>
 </versionInfo>
         <dc:contributor>Chris Mungall</dc:contributor>
         <rdfs:comment>When we say in a definition A has as part a B, that does not contradict that A can have as parts many Bs.</rdfs:comment>
-        <rdfs:comment>Taking into consideration Barry Smith&#39;s BFO Draft Document version March 2012</rdfs:comment>
+        <rdfs:comment>Taking into consideration Barry Smith&apos;s BFO Draft Document version March 2012</rdfs:comment>
         <rdfs:comment>This is a quick and dirty draft of an ontology that was sketched on a board during the Biodiversity Ontologies meeting on 5/17/2012 by Barry Smith. I It has not be creating using proper ontology editing methods, and is for illustrative purposes only.</rdfs:comment>
         <dc:contributor>David Osumi-Sutherland</dc:contributor>
         <rdfs:comment>This is a tentative version to draft a core version of BFO in OWL, addressing the following needs:
@@ -190,7 +191,7 @@ Bearer_of in contrast to inherence, is time-indexed, since if a is a bearer of s
         <rdfs:comment>There are also reciprocal realizable dependent continuants (e.g. husband/wife; complementary dispositions (for example of key and lock), as described in [28]).
  
 AXIOM: if a realizable entity is realized in a process p, then its bearer participates in p.</rdfs:comment>
-        <rdfs:comment>(JH) Should there also be a synonymous name `realized in&#39; here as well?</rdfs:comment>
+        <rdfs:comment>(JH) Should there also be a synonymous name `realized in&apos; here as well?</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">realized by</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">realized_by</obo:IAO_0000118>
         <rdfs:range rdf:resource="&obo;BFO_0000007"/>
@@ -249,7 +250,6 @@ AXIOM: All realizable dependent continuants have material entities or sites as t
 
     <ObjectProperty rdf:about="&obo;BFO_0000057">
         <rdfs:label xml:lang="en">has participant</rdfs:label>
-        <rdfs:seeAlso>[091-001]</rdfs:seeAlso>
         <rdfs:seeAlso>[087-001]</rdfs:seeAlso>
         <rdfs:comment>ELUCIDATION: has_participant is an instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the occurrent. [086-002]
 DOMAIN: process
@@ -265,6 +265,7 @@ there is some material entity c, b s-depends on c &amp; a s-depends on c. [090-0
 	
 AXIOM: if a has_participant b at t &amp; b is a generically dependent continuant, then
 there is some material entity c, b g-depends on c &amp; a s-depends on c. [091-001]</rdfs:comment>
+        <rdfs:seeAlso>[091-001]</rdfs:seeAlso>
         <rdfs:seeAlso>[089-001]</rdfs:seeAlso>
         <rdfs:seeAlso>[090-001]</rdfs:seeAlso>
         <rdfs:seeAlso>[088-001]</rdfs:seeAlso>
@@ -476,8 +477,8 @@ a and b do not share common parts
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">is located in</rdfs:label>
         <rdfs:seeAlso>[045-001]</rdfs:seeAlso>
-        <rdfs:seeAlso>[047-001]</rdfs:seeAlso>
         <rdfs:seeAlso>[046-001]</rdfs:seeAlso>
+        <rdfs:seeAlso>[047-001]</rdfs:seeAlso>
         <rdfs:comment>The located_in relation links independent continuants which are not spatial regions.
 
 DEFINITION: a located_in b at t = Def. a and b are independent continuants, and the region at which a is located at t is a (proper or improper) continuant_part_of the region at which b is located at t. [045-001]
@@ -503,13 +504,13 @@ AXIOM: if a continuant_part_of b at t, then a is continuant_located_in b at t. [
             <rdf:Description rdf:about="&obo;BFO_0000105"/>
         </propertyChainAxiom>
         <propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000105"/>
-            <rdf:Description rdf:about="&obo;BFO_0000082"/>
-        </propertyChainAxiom>
-        <propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="&obo;BFO_0000083"/>
             <rdf:Description rdf:about="&obo;BFO_0000105"/>
             <rdf:Description rdf:about="&obo;BFO_0000123"/>
+        </propertyChainAxiom>
+        <propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;BFO_0000105"/>
+            <rdf:Description rdf:about="&obo;BFO_0000082"/>
         </propertyChainAxiom>
     </ObjectProperty>
     
@@ -523,8 +524,8 @@ AXIOM: if a continuant_part_of b at t, then a is continuant_located_in b at t. [
         <rdfs:seeAlso>[042-001]</rdfs:seeAlso>
         <rdfs:comment>AXIOM: every region is located_at itself at all times. [042-001]
 
-AXIOM: if a located at r at t &amp; a&#39;
-continuant_part_of a at t, then there is some r&#39; which is continuant_part_of r &amp; such that a&#39;  located_at r&#39; at t. [043-001]
+AXIOM: if a located at r at t &amp; a&apos;
+continuant_part_of a at t, then there is some r&apos; which is continuant_part_of r &amp; such that a&apos;  located_at r&apos; at t. [043-001]
 </rdfs:comment>
         <rdfs:seeAlso>[041-002]</rdfs:seeAlso>
         <rdfs:seeAlso>[043-001]</rdfs:seeAlso>
@@ -711,7 +712,7 @@ EXAMPLE: the surface of my liver physically bounds my liver.</rdfs:comment>
         <rdfs:comment>DEFINITION: gDependsOn or sDependsOn</rdfs:comment>
         <rdfs:comment>inheresIn (inverse: bearerOf) relates a quality, role, function, or dispositionwith the physical entity it depends on.
 EXAMPLE: a color inheres in a paint, the ability to fly inheres in a bird.</rdfs:comment>
-        <rdfs:comment>During the demonstration, Barry used &#39;depends on&#39; to relate a material entity to a role. This relation cannot be used this way, because of the specified domain and range. Must use &#39;inverse depends on&#39;</rdfs:comment>
+        <rdfs:comment>During the demonstration, Barry used &apos;depends on&apos; to relate a material entity to a role. This relation cannot be used this way, because of the specified domain and range. Must use &apos;inverse depends on&apos;</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">depends_on</obo:IAO_0000118>
         <rdfs:range rdf:resource="&obo;BFO_0000004"/>
         <inverseOf rdf:resource="&obo;BFO_0000122"/>
@@ -1009,14 +1010,6 @@ EXAMPLES: The beginning of a piece of music, the beginning of an hour.</rdfs:com
         <obo:IAO_0000118 xml:lang="en">inv_specifically_depends_on</obo:IAO_0000118>
         <inverseOf rdf:resource="&obo;BFO_0000070"/>
         <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000122"/>
-        <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;BFO_0000002"/>
-                    <rdf:Description rdf:about="&obo;BFO_0000007"/>
-                </unionOf>
-            </Class>
-        </rdfs:domain>
         <rdfs:range>
             <Class>
                 <unionOf rdf:parseType="Collection">
@@ -1025,6 +1018,14 @@ EXAMPLES: The beginning of a piece of music, the beginning of an hour.</rdfs:com
                 </unionOf>
             </Class>
         </rdfs:range>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;BFO_0000002"/>
+                    <rdf:Description rdf:about="&obo;BFO_0000007"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
     </ObjectProperty>
     
 
@@ -1145,9 +1146,9 @@ EXAMPLES: The beginning of a piece of music, the beginning of an hour.</rdfs:com
         <rdfs:label xml:lang="en">occurrent part of</rdfs:label>
         <rdfs:seeAlso>[003-001]</rdfs:seeAlso>
         <rdfs:seeAlso>[113-001]</rdfs:seeAlso>
+        <rdfs:seeAlso>[112-001]</rdfs:seeAlso>
         <obo:IAO_0000118 xml:lang="en">occurrent_part_of</obo:IAO_0000118>
         <rdfs:comment>occurrent_part_of b =Def. a is a part of b &amp; a and b are ocurrents. </rdfs:comment>
-        <rdfs:seeAlso>[112-001]</rdfs:seeAlso>
         <rdfs:range rdf:resource="&obo;BFO_0000003"/>
         <rdfs:domain rdf:resource="&obo;BFO_0000003"/>
         <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000050"/>
@@ -1223,10 +1224,10 @@ a proper_part_of b =Def. a part_of b &amp; a and b are not identical</rdfs:comme
     <ObjectProperty rdf:about="&obo;BFO_0000136">
         <rdfs:label>proper temporal part of</rdfs:label>
         <rdfs:seeAlso>[117-001]</rdfs:seeAlso>
-        <rdfs:seeAlso>[116-001]</rdfs:seeAlso>
         <rdfs:comment>DEFINITION: a proper_temporal_part_of b =Def. a temporal_part_of b &amp; not (a = b). [116-001]
 
 AXIOM: if a proper_temporal_part_of b, then there is some c which is a proper_temporal_part_of b and which shares no parts with a. [117-001]</rdfs:comment>
+        <rdfs:seeAlso>[116-001]</rdfs:seeAlso>
         <obo:IAO_0000118 xml:lang="en">proper_temporal_part_of</obo:IAO_0000118>
         <rdfs:range rdf:resource="&obo;BFO_0000003"/>
         <rdfs:domain rdf:resource="&obo;BFO_0000003"/>
@@ -1276,7 +1277,7 @@ AXIOM: if a proper_temporal_part_of b, then there is some c which is a proper_te
         <rdfs:comment>DEFINITION: a temporal_part_of b =Def.
 a occurrent_part_of b &amp;
 &amp; for some temporal region r, a occupies r
-&amp; for all occurrents c, r&#39; (if c occupies r&#39;  &amp; r&#39; occurrent_part_of r
+&amp; for all occurrents c, r&apos; (if c occupies r&apos;  &amp; r&apos; occurrent_part_of r
 then (c occurrent_part_of a iff c occurrent_part_of b)). [078-001]</rdfs:comment>
         <rdfs:seeAlso>[078-001]</rdfs:seeAlso>
         <obo:IAO_0000118 xml:lang="en">temporal_part_of</obo:IAO_0000118>
@@ -1376,8 +1377,8 @@ forall a:A and t:time: exists some b:B and R_ter(a, b, t)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000001"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000050"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000002"/>
+                <onProperty rdf:resource="&obo;BFO_0000108"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000143"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1388,8 +1389,8 @@ forall a:A and t:time: exists some b:B and R_ter(a, b, t)</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000108"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000143"/>
+                <onProperty rdf:resource="&obo;BFO_0000050"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000002"/>
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&obo;BFO_0000003"/>
@@ -1439,12 +1440,6 @@ AXIOM: if a is a continuant, then there is some one-dimensional temporal region 
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000001"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000115"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000003"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000070"/>
                 <allValuesFrom>
                     <Class>
@@ -1464,14 +1459,20 @@ AXIOM: if a is a continuant, then there is some one-dimensional temporal region 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000130"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000008"/>
+                <onProperty rdf:resource="&obo;BFO_0000115"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000003"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000130"/>
                 <someValuesFrom rdf:resource="&obo;BFO_0000011"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000130"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000008"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>EXAMPLES: the life of an organism, a surgical, the spatiotemporal setting occupied by a process of cellular meiosis, the most interesting part of Van Gogh’s life, the spatiotemporal region occupied by the development of a cancer tumor.
@@ -1488,7 +1489,7 @@ THEOREM: Every occurrent occupies some temporal region. [109-001]</rdfs:comment>
         <obo:IAO_0000111 xml:lang="en">occurrent</obo:IAO_0000111>
         <obo:IAO_0000118 xml:lang="en">perdurant</obo:IAO_0000118>
         <obo:IAO_0000112 xml:lang="en">the life of an organism</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the most interesting part of Van Gogh&#39;s life</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the most interesting part of Van Gogh&apos;s life</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the spatiotemporal context occupied by a process of cellular meiosis</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the spatiotemporal region occupied by the development of a cancer tumor</obo:IAO_0000112>
     </Class>
@@ -1509,6 +1510,7 @@ THEOREM: Every occurrent occupies some temporal region. [109-001]</rdfs:comment>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000002"/>
         <disjointWith rdf:resource="&obo;BFO_0000005"/>
+        <obo:IAO_0000115 xml:lang="en">A continuant  that is a bearer of quality  and realizable entity  entities, in which other entities inhere and which itself cannot inhere in anything.</obo:IAO_0000115>
         <rdfs:comment>DEFINITION: A is an independent continuant = Def. a is a continuant which is such that there is no b such that a s-depends on b. [017-001]
 
 EXAMPLES: an atom, a molecule, an organism, a heart, a chair, the bottom right portion of a human torso, a leg; the interior of your mouth; a spatial region; an orchestra.
@@ -1518,9 +1520,8 @@ AXIOM: Every independent continuant is such that there are entities which is s-d
         <rdfs:seeAlso> [017-001]
 
 </rdfs:seeAlso>
-        <rdfs:seeAlso> [018-001]</rdfs:seeAlso>
-        <obo:IAO_0000115 xml:lang="en">A continuant  that is a bearer of quality  and realizable entity  entities, in which other entities inhere and which itself cannot inhere in anything.</obo:IAO_0000115>
         <rdfs:comment>EXAMPLES: an atom, a molecule, an organism, a heart, a chair, the bottom right portion of a human torso, a leg; the interior of your mouth; a spatial region; an orchestra.</rdfs:comment>
+        <rdfs:seeAlso> [018-001]</rdfs:seeAlso>
         <obo:IAO_0000112 xml:lang="en">a chair</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a heart</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a leg</obo:IAO_0000112>
@@ -1610,14 +1611,8 @@ AXIOM: Every independent continuant is such that there are entities which is s-d
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000003"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000121"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000003"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000070"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000004"/>
+                <onProperty rdf:resource="&obo;BFO_0000057"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1635,20 +1630,14 @@ AXIOM: Every independent continuant is such that there are entities which is s-d
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000057"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000040"/>
+                <onProperty rdf:resource="&obo;BFO_0000121"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000003"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000066"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000143"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000066"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000143"/>
+                <onProperty rdf:resource="&obo;BFO_0000070"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000004"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1659,8 +1648,20 @@ AXIOM: Every independent continuant is such that there are entities which is s-d
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000066"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000143"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000070"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000004"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000004"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000066"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000143"/>
             </Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A processual entity  that is a maximally connected spatiotemporal whole and has bona fide beginnings and endings corresponding to real discontinuities.</obo:IAO_0000115>
@@ -1759,14 +1760,14 @@ A surface is a connected one-dimensional spatial region.
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000003"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000134"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000008"/>
+                <onProperty rdf:resource="&obo;BFO_0000051"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000011"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000051"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000011"/>
+                <onProperty rdf:resource="&obo;BFO_0000134"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000008"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1929,6 +1930,14 @@ For some qualities, e.g. surface color, specifically dependence is not on the ma
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
         <equivalentClass>
             <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;BFO_0000017"/>
+                    <rdf:Description rdf:about="&obo;BFO_0000019"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <equivalentClass>
+            <Class>
                 <intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;BFO_0000005"/>
                     <Restriction>
@@ -1936,14 +1945,6 @@ For some qualities, e.g. surface color, specifically dependence is not on the ma
                         <someValuesFrom rdf:resource="&obo;BFO_0000004"/>
                     </Restriction>
                 </intersectionOf>
-            </Class>
-        </equivalentClass>
-        <equivalentClass>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;BFO_0000017"/>
-                    <rdf:Description rdf:about="&obo;BFO_0000019"/>
-                </unionOf>
             </Class>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000005"/>
@@ -2117,19 +2118,6 @@ EXAMPLES: a cube-shaped region of space, a sphere-shaped region of space,
         <rdfs:label xml:lang="en">site</rdfs:label>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000050"/>
-                <allValuesFrom>
-                    <Class>
-                        <unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;BFO_0000029"/>
-                            <rdf:Description rdf:about="&obo;BFO_0000040"/>
-                        </unionOf>
-                    </Class>
-                </allValuesFrom>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000051"/>
                 <allValuesFrom rdf:resource="&obo;BFO_0000029"/>
             </Restriction>
@@ -2145,6 +2133,19 @@ EXAMPLES: a cube-shaped region of space, a sphere-shaped region of space,
                 </intersectionOf>
             </Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000050"/>
+                <allValuesFrom>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;BFO_0000029"/>
+                            <rdf:Description rdf:about="&obo;BFO_0000040"/>
+                        </unionOf>
+                    </Class>
+                </allValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
         <disjointWith rdf:resource="&obo;BFO_0000140"/>
         <rdfs:comment>ELUCIDATION: a is a site means: a is a three-dimensional immaterial entity that is (partially or wholly) bounded by a material entity or a three-dimensional immaterial part thereof. [034-001]
 
@@ -2153,7 +2154,7 @@ EXAMPLES: a hole in the interior of a portion of cheese, a rabbit hole, the inte
         <rdfs:seeAlso>[034-001]</rdfs:seeAlso>
         <obo:IAO_0000115 xml:lang="en">An independent continuant  consisting of a characteristic spatial shape in relation to some arrangement of other continuant  entities and of the medium which is enclosed in whole or in part by this characteristic spatial shape. Site  entities are entities that can be occupied by other continuant  entities.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">An instance of Site [snap:Site] is a mixture of independent continuant [snap:IndependentContinuant] entities which act as surrounding environments for other independent continuant [snap:IndependentContinuant] entities, most importantly for instances of object [snap:Object]. A site [snap:Site] is typically made of object [snap:Object] or fiat object part [snap:FiatObjectPart] entities and a surrounding medium in which is found an object [snap:Object] occupying the site [snap:Site]. Independent continuant [snap:IndependentContinuant] entities may be associated with others (which, then, are sites) through a relation of &quot;occupation&quot;. That relation is connected to, but distinct from, the relation of spatial location. Site [snap:Site] entities are not to be confused with spatial region [snap:SpatialRegion] entities. In BFO, site [snap:Site] allows for a so-called relational view of space which is different from the view corresponding to the class spatial region [snap:SpatialRegion] (see the comment on this class).</obo:IAO_0000116>
-        <obo:IAO_0000112 xml:lang="en">Maria&#39;s nostril or her intestines for a variety of bacteria</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">Maria&apos;s nostril or her intestines for a variety of bacteria</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">a particular room in a particular hospital</obo:IAO_0000112>
         <obo:IAO_0000111 xml:lang="en">site</obo:IAO_0000111>
     </Class>
@@ -2202,13 +2203,13 @@ manifests causal unity of one or other of the types CUn listed above
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000005"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000050"/>
+                <onProperty rdf:resource="&obo;BFO_0000051"/>
                 <allValuesFrom rdf:resource="&obo;BFO_0000031"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000051"/>
+                <onProperty rdf:resource="&obo;BFO_0000050"/>
                 <allValuesFrom rdf:resource="&obo;BFO_0000031"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -2257,18 +2258,6 @@ Functions are realized in processes called functionings. Each function has a bea
         <rdfs:label xml:lang="en">process boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000003"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000131"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000007"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000066"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000148"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <Class>
                 <complementOf>
                     <Restriction>
@@ -2280,14 +2269,20 @@ Functions are realized in processes called functionings. Each function has a bea
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000131"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000007"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000130"/>
                 <someValuesFrom rdf:resource="&obo;BFO_0000148"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000138"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000007"/>
+                <onProperty rdf:resource="&obo;BFO_0000066"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000148"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2296,13 +2291,19 @@ Functions are realized in processes called functionings. Each function has a bea
                 <allValuesFrom rdf:resource="&obo;BFO_0000008"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000138"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000007"/>
+            </Restriction>
+        </rdfs:subClassOf>
         <rdfs:seeAlso>[085-001]</rdfs:seeAlso>
         <rdfs:comment>AXIOM: Every process boundary occupies some zero-dimensional temporal region. [085-001]</rdfs:comment>
+        <rdfs:comment>p is a process boundary = Def. p is an occurrent entity which separates one process from another immediately succeeding process &amp; occupies a zero-dimensional temporal region.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A processual entity  that is the fiat or bona fide instantaneous temporal process boundary.</obo:IAO_0000115>
+        <rdfs:comment>EXAMPLE: the boundary between the 2nd and 3rd year of your life.</rdfs:comment>
         <obo:IAO_0000112 xml:lang="en">birth</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">death</obo:IAO_0000112>
-        <rdfs:comment>p is a process boundary = Def. p is an occurrent entity which separates one process from another immediately succeeding process &amp; occupies a zero-dimensional temporal region.</rdfs:comment>
-        <rdfs:comment>EXAMPLE: the boundary between the 2nd and 3rd year of your life.</rdfs:comment>
-        <obo:IAO_0000115 xml:lang="en">A processual entity  that is the fiat or bona fide instantaneous temporal process boundary.</obo:IAO_0000115>
         <obo:IAO_0000111 xml:lang="en">process boundary</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">the detaching of a finger in an industrial accident</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the final separation of two cells at the end of cell-division</obo:IAO_0000112>
@@ -2339,12 +2340,6 @@ Functions are realized in processes called functionings. Each function has a bea
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000050"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000040"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000115"/>
                 <allValuesFrom rdf:resource="&obo;BFO_0000027"/>
             </Restriction>
@@ -2355,15 +2350,19 @@ Functions are realized in processes called functionings. Each function has a bea
                 <allValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000050"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000040"/>
+            </Restriction>
+        </rdfs:subClassOf>
         <disjointWith rdf:resource="&obo;BFO_0000141"/>
         <rdfs:seeAlso>[020-001]</rdfs:seeAlso>
         <obo:IAO_0000115 xml:lang="en">An independent continuant  that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000115>
-        <rdfs:comment>EXAMPLES: collection of random bacteria, a chair, dorsal surface of the body</rdfs:comment>
-        <obo:IAO_0000116 xml:lang="en">Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</obo:IAO_0000116>
         <rdfs:seeAlso>[019-001]</rdfs:seeAlso>
-        <obo:IAO_0000116 xml:lang="en">Examples: collection of random bacteria, a chair, dorsal surface of the body</obo:IAO_0000116>
+        <rdfs:comment>EXAMPLES: collection of random bacteria, a chair, dorsal surface of the body</rdfs:comment>
         <rdfs:comment>Object, Fiat Object Part and Object Aggregate are not intended to be exhaustive of  Material Entity. Users are invited to propose new subcategories of Material Entity.
-The document provides a more extensive account of what &#39;Object&#39; means (roughly: an object is a maximal causally unified material entity); it offers three paradigms of causal unity (for cells and organisms, for solid portions of matter, and for engineered artifacts)</rdfs:comment>
+The document provides a more extensive account of what &apos;Object&apos; means (roughly: an object is a maximal causally unified material entity); it offers three paradigms of causal unity (for cells and organisms, for solid portions of matter, and for engineered artifacts)</rdfs:comment>
         <rdfs:comment>ELUCIDATION: A material entity is an independent continuant that has some portion of matter as proper or improper part. [019-001]
 EXAMPLES: a photon, a human being, the undetached arm of a human being, an aggregate of human beings.
 
@@ -2379,6 +2378,8 @@ THEOREM: every entity of which a material entity is part is also a material enti
 
 ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.
 </rdfs:comment>
+        <obo:IAO_0000116 xml:lang="en">Examples: collection of random bacteria, a chair, dorsal surface of the body</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</obo:IAO_0000116>
         <obo:IAO_0000111 xml:lang="en">material entity</obo:IAO_0000111>
     </Class>
     
@@ -2436,8 +2437,8 @@ a is a continuant fiat boundary = Def. a is an immaterial entity that is of zero
         </equivalentClass>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000083"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000028"/>
+                <onProperty rdf:resource="&obo;BFO_0000115"/>
+                <allValuesFrom rdf:resource="&obo;BFO_0000141"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2448,8 +2449,8 @@ a is a continuant fiat boundary = Def. a is an immaterial entity that is of zero
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000115"/>
-                <allValuesFrom rdf:resource="&obo;BFO_0000141"/>
+                <onProperty rdf:resource="&obo;BFO_0000083"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000028"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:seeAlso>[028-001]</rdfs:seeAlso>
@@ -2619,7 +2620,7 @@ EXAMPLES: a temporal region that is occupied by a process boundary; right now; t
         <obo:IAO_0000115>A material entity that derives from an organism or virus or viroid.</obo:IAO_0000115>
         <rdfs:comment>This class is understood to mean: A material entity that is either an organism, a part of an organism, a collection of organisms, or a fossil.
 
-The relation &#39;organismal entity derives from organism&#39; was in the original diagram. Subclasses of organismal entity include organism, and It is not clear if we can say that an organism derives from an organism.</rdfs:comment>
+The relation &apos;organismal entity derives from organism&apos; was in the original diagram. Subclasses of organismal entity include organism, and It is not clear if we can say that an organism derives from an organism.</rdfs:comment>
     </Class>
     
 
@@ -2693,10 +2694,10 @@ The original diagram only had organsims, but DWC wants to include viruses and vi
             </Class>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;DWC_0000016"/>
-        <obo:IAO_0000115>A museum collections entity that derives from an organismal entity,  has a persistent evidence role and &#39;depends on&#39; a process of collecting.</obo:IAO_0000115>
-        <rdfs:comment>The label for this on the original diagram was &#39;collection object&#39;. However, not all entities in collections will fit the defition of &#39;object&#39;, so &#39;collection entity is probably a better name.
+        <obo:IAO_0000115>A museum collections entity that derives from an organismal entity,  has a persistent evidence role and &apos;depends on&apos; a process of collecting.</obo:IAO_0000115>
+        <rdfs:comment>The label for this on the original diagram was &apos;collection object&apos;. However, not all entities in collections will fit the defition of &apos;object&apos;, so &apos;collection entity is probably a better name.
 
-The relation &#39;depends on&#39; cannot really be used here.</rdfs:comment>
+The relation &apos;depends on&apos; cannot really be used here.</rdfs:comment>
     </Class>
     
 
@@ -2706,7 +2707,7 @@ The relation &#39;depends on&#39; cannot really be used here.</rdfs:comment>
     <Class rdf:about="&obo;DWC_0000006">
         <rdfs:label>evidence role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
-        <rdfs:comment>I added an extra layer for &#39;evenidence role&#39; in between &#39;role&#39; and &#39;persistent evidence role&#39;.</rdfs:comment>
+        <rdfs:comment>I added an extra layer for &apos;evenidence role&apos; in between &apos;role&apos; and &apos;persistent evidence role&apos;.</rdfs:comment>
     </Class>
     
 
@@ -2726,7 +2727,7 @@ The relation &#39;depends on&#39; cannot really be used here.</rdfs:comment>
     <Class rdf:about="&obo;DWC_0000008">
         <rdfs:label>observing</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
-        <rdfs:comment>The original diagram labeled this as &#39;observing&#39;, but I think it is clearer as &#39;process of observing&#39;.</rdfs:comment>
+        <rdfs:comment>The original diagram labeled this as &apos;observing&apos;, but I think it is clearer as &apos;process of observing&apos;.</rdfs:comment>
     </Class>
     
 
@@ -2736,7 +2737,7 @@ The relation &#39;depends on&#39; cannot really be used here.</rdfs:comment>
     <Class rdf:about="&obo;DWC_0000009">
         <rdfs:label>collecting</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
-        <rdfs:comment>The original diagram labeled this as &#39;collecting&#39;, but I think it is clearer as &#39;process of collecting&#39;.</rdfs:comment>
+        <rdfs:comment>The original diagram labeled this as &apos;collecting&apos;, but I think it is clearer as &apos;process of collecting&apos;.</rdfs:comment>
     </Class>
     
 
@@ -2746,7 +2747,7 @@ The relation &#39;depends on&#39; cannot really be used here.</rdfs:comment>
     <Class rdf:about="&obo;DWC_0000010">
         <rdfs:label>being there</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
-        <rdfs:comment>The original diagram labeled this as &#39;being there&#39;, but I think it is clearer as &#39;process of being there&#39;.
+        <rdfs:comment>The original diagram labeled this as &apos;being there&apos;, but I think it is clearer as &apos;process of being there&apos;.
 Process of existing in a particular spatio-temporal region.</rdfs:comment>
     </Class>
     
@@ -2790,6 +2791,7 @@ Maybe it has an observing as a part.</rdfs:comment>
         <rdfs:label>museum collection entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
         <obo:IAO_0000115>An evidence role that depends on a museum collection object.</obo:IAO_0000115>
+        <rdfs:comment>Clearly the definition was supposed to go with something like &apos;museum collection entity role&apos;, not this term.</rdfs:comment>
     </Class>
     
 
@@ -2804,14 +2806,6 @@ Maybe it has an observing as a part.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/DWC_0000018 -->
-
-    <Class rdf:about="&obo;DWC_0000018">
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000011"/>
-    </Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/DWC_0000019 -->
 
     <Class rdf:about="&obo;DWC_0000019">
@@ -2819,7 +2813,7 @@ Maybe it has an observing as a part.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;DWC_0000017"/>
         <obo:IAO_0000115>An information artifact that is about a spatio-temporal region at which a process occured.</obo:IAO_0000115>
         <rdfs:comment>Examples of a process are observing, collecting, identifying.
-&#39;is about&#39; is the relation used in the IAO between an information content entity and some other entity.</rdfs:comment>
+&apos;is about&apos; is the relation used in the IAO between an information content entity and some other entity.</rdfs:comment>
     </Class>
     
 
@@ -2853,6 +2847,129 @@ Maybe it has an observing as a part.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000008 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000008">
+        <rdfs:label xml:lang="en">material sample</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000087"/>
+                <someValuesFrom rdf:resource="&obo;biocode/biocode_0000013"/>
+            </Restriction>
+        </equivalentClass>
+        <obo:IAO_0000115>A materiel entity that has been selected by (something or someone).</obo:IAO_0000115>
+        <rdfs:comment>Example: A jar of water, the microbes that were filtered from that water, the dna extracted from those microbes, a subsample of that dna.
+Submit this to OBI</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000009 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000009">
+        <rdfs:label xml:lang="en">selecting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000010 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000010">
+        <rdfs:label xml:lang="en">physical taking out</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
+        <rdfs:comment>synonyms: extraction, removal</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000011 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000011">
+        <rdfs:label xml:lang="en">submitting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000012 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000012">
+        <rdfs:label xml:lang="en">material sampling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
+        <obo:IAO_0000115>A process that has as participant some material entity and has as process parts some physical taking out, some selecting, and some submitting.
+Has as output some material sample.</obo:IAO_0000115>
+        <rdfs:comment>This is different from statistical sampling.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000013 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000013">
+        <rdfs:label xml:lang="en">material sample role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <obo:IAO_0000115>Is the output of some successful material sampling.</obo:IAO_0000115>
+        <rdfs:comment>According to OBI, you are successful because participating in a planned processes (with protocol).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000014 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000014">
+        <rdfs:label xml:lang="en">filtering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000010"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000015 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000015">
+        <rdfs:label xml:lang="en">aliquoting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000010"/>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000017 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000017">
+        <rdfs:label xml:lang="en">data sampling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
+        <obo:IAO_0000115>Has as output some information artifact.</obo:IAO_0000115>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000018 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000018">
+        <rdfs:label xml:lang="en">statistical sample</rdfs:label>
+        <obo:IAO_0000115>Follows a statistical protocol.
+Can be either material or data sample.</obo:IAO_0000115>
+        <rdfs:comment>check OBI for what they have</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000019 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000019">
+        <rdfs:label xml:lang="en">data sample</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000020 -->
+
+    <Class rdf:about="&obo;biocode/biocode_0000020">
+        <rdfs:label xml:lang="en">statistical data sample</rdfs:label>
+    </Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2863,7 +2980,7 @@ Maybe it has an observing as a part.</rdfs:comment>
 
     <rdf:Description rdf:about="&obo;FiatProcessPart">
         <rdfs:label>fiat_process_part</rdfs:label>
-        <rdfs:comment>EXAMPLES: chewing during a meal, the middle part of a rainstorm, the worst part of a heart-attack, the most interesting part of Van Gogh&#39;s life</rdfs:comment>
+        <rdfs:comment>EXAMPLES: chewing during a meal, the middle part of a rainstorm, the worst part of a heart-attack, the most interesting part of Van Gogh&apos;s life</rdfs:comment>
         <rdfs:comment>DEFINITION: A processual entity [ProcessualEntity] that is part of a process but that does not have bona fide beginnings and endings corresponding to real discontinuities.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;ProcessualEntity">
@@ -2881,7 +2998,7 @@ Maybe it has an observing as a part.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;ConnectedSpatiotemporalRegion">
         <rdfs:label>connected_spatiotemporal_region</rdfs:label>
-        <rdfs:comment>EXAMPLES: the spatial and temporal location of an individual organism&#39;s life, the spatial and temporal location of the development of a fetus</rdfs:comment>
+        <rdfs:comment>EXAMPLES: the spatial and temporal location of an individual organism&apos;s life, the spatial and temporal location of the development of a fetus</rdfs:comment>
         <rdfs:comment>DEFINITION: A spatiotemporal region [SpatiotemporalRegion] that has temporal and spatial dimensions such that all points within the spatiotemporal region are mediately or immediately connected to all other points within the same spatiotemporal region [SpatiotemporalRegion].</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#OWLObjectPropertyImpl_00000009346133422957">
@@ -2900,8 +3017,8 @@ Maybe it has an observing as a part.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;ConnectedTemporalRegion">
         <rdfs:label>connected_temporal_region</rdfs:label>
-        <rdfs:comment>EXAMPLES: the 1970s years, the time from the beginning to the end of a heart attack, the time taken up by cellular meiosis</rdfs:comment>
         <rdfs:comment>DEFINITION: A temporal region [BFO_0000008] every point of which is mediately or immediately connected with every other point of which.</rdfs:comment>
+        <rdfs:comment>EXAMPLES: the 1970s years, the time from the beginning to the end of a heart attack, the time taken up by cellular meiosis</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;ScatteredTemporalRegion">
         <rdfs:label>scattered_temporal_region</rdfs:label>
@@ -2918,8 +3035,8 @@ EXAMPLE: The process of heart beating has the process quality heart rate.</rdfs:
     <rdf:Description rdf:about="&obo;hasProperPhysicalPart">
         <rdfs:comment>hasProperPart (inverse: properPartOf) obtains between ***** physical objects. The distinction between parthood and locatedness is complex and does not obey strict criteria.
 This relation is irreflexive, i.e. a physical object cannot have itself as a physical proper part.
-Note that for abstract entities like information artefacts there is a separate relation pair &#39;&#39;abstractPartOf&#39;&#39; and &#39;&#39;hasAbstractPart&#39;&#39;
-For processes there are the relations &#39;&#39;hasProcessualPart&#39;&#39; and &#39;&#39;processualPartOf&#39;&#39;
+Note that for abstract entities like information artefacts there is a separate relation pair &apos;&apos;abstractPartOf&apos;&apos; and &apos;&apos;hasAbstractPart&apos;&apos;
+For processes there are the relations &apos;&apos;hasProcessualPart&apos;&apos; and &apos;&apos;processualPartOf&apos;&apos;
 EXAMPLES: my thumb is a proper physical part of my hand, this keyboard is a proper physical part of my computer.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;ProcessAggregate">
@@ -2927,18 +3044,18 @@ EXAMPLES: my thumb is a proper physical part of my hand, this keyboard is a prop
         <rdfs:comment>DEFINITION: A processual entity [ProcessualEntity] that is a mereological sum of process [BFO_0000007] entities and possesses non-connected boundaries.</rdfs:comment>
         <rdfs:comment>EXAMPLES: the beating of the hearts of each of seven individuals in the room, the playing of each of the members of an orchestra, a process of digestion and a process of thinking taken together</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;ProcessualContext">
-        <rdfs:label>processual_context</rdfs:label>
-        <rdfs:comment>DEFINITION: An occurrent [BFO_0000003] consisting of a characteristic spatial shape inhering in some arrangement of other occurrent [BFO_0000003] entities. Processual context [ProcessualContext] entities are characteristically entities at or in which other occurrent [BFO_0000003] entities can be located or occur.</rdfs:comment>
-        <rdfs:comment>Comment: An instance of a processual context [ProcessualContext] is a mixture of processual entity [ProcessualEntity] which stand as surrounding environments for other processual entity [ProcessualEntity] entities. The class processual context [ProcessualContext] is the analogous among occurrent [BFO_0000003] entities to the class site [Site] among continuant [BFO_0000002] entities.</rdfs:comment>
-        <rdfs:comment>EXAMPLES: The processual context for a given manipulation occurring as part of an experiment is made of processual entities which occur in parallel, are not necessarily all parts of the experiment themselves and may involve continuant [BFO_0000002] entities which are in the spatial vicinity of the participants in the experiment.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;BFO_0000025">
         <rdfs:label>object boundary</rdfs:label>
         <rdfs:comment>EXAMPLES: the surface of the skin, the surface of the earth, the surface of the interior of the stomach, the outer surface of a cell or cell wall</rdfs:comment>
         <rdfs:comment>DEFINITION: An independent continuant [BFO_0000004] that is a lower dimensional part of a spatial entity, normally a closed two-dimensional surface. Boundaries are those privileged parts of object [Object] entities that exist at exactly the point where the object [Object] is separated off from the rest of the existing entities in the world.</rdfs:comment>
         <rdfs:comment>Synonyms: substance boundary</rdfs:comment>
         <rdfs:comment>Comment: Boundaries are theoretically difficult entities to account for, however the intuitive notion of a physical boundary as a surface of some sort (whether inside or outside of a thing) will generally serve as a good guide for the use of this universal.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ProcessualContext">
+        <rdfs:label>processual_context</rdfs:label>
+        <rdfs:comment>DEFINITION: An occurrent [BFO_0000003] consisting of a characteristic spatial shape inhering in some arrangement of other occurrent [BFO_0000003] entities. Processual context [ProcessualContext] entities are characteristically entities at or in which other occurrent [BFO_0000003] entities can be located or occur.</rdfs:comment>
+        <rdfs:comment>Comment: An instance of a processual context [ProcessualContext] is a mixture of processual entity [ProcessualEntity] which stand as surrounding environments for other processual entity [ProcessualEntity] entities. The class processual context [ProcessualContext] is the analogous among occurrent [BFO_0000003] entities to the class site [Site] among continuant [BFO_0000002] entities.</rdfs:comment>
+        <rdfs:comment>EXAMPLES: The processual context for a given manipulation occurring as part of an experiment is made of processual entities which occur in parallel, are not necessarily all parts of the experiment themselves and may involve continuant [BFO_0000002] entities which are in the spatial vicinity of the participants in the experiment.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;ScatteredSpatiotemporalRegion">
         <rdfs:label>scattered_spatiotemporal_region</rdfs:label>
@@ -2969,11 +3086,21 @@ EXAMPLES: my thumb is a proper physical part of my hand, this keyboard is a prop
         <equivalentClass>
             <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000125"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000034"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
             </Restriction>
         </equivalentClass>
-        <onProperty rdf:resource="&obo;BFO_0000085"/>
-        <someValuesFrom rdf:resource="&obo;BFO_0000034"/>
+        <onProperty rdf:resource="&obo;BFO_0000112"/>
+        <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
+    </Restriction>
+    <Restriction>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000125"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000023"/>
+            </Restriction>
+        </equivalentClass>
+        <onProperty rdf:resource="&obo;BFO_0000087"/>
+        <someValuesFrom rdf:resource="&obo;BFO_0000023"/>
     </Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
@@ -2988,32 +3115,22 @@ EXAMPLES: my thumb is a proper physical part of my hand, this keyboard is a prop
     <Restriction>
         <equivalentClass>
             <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000125"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000019"/>
-            </Restriction>
-        </equivalentClass>
-        <onProperty rdf:resource="&obo;BFO_0000086"/>
-        <someValuesFrom rdf:resource="&obo;BFO_0000019"/>
-    </Restriction>
-    <Restriction>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000125"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000023"/>
-            </Restriction>
-        </equivalentClass>
-        <onProperty rdf:resource="&obo;BFO_0000087"/>
-        <someValuesFrom rdf:resource="&obo;BFO_0000023"/>
-    </Restriction>
-    <Restriction>
-        <equivalentClass>
-            <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000087"/>
                 <someValuesFrom rdf:resource="&obo;BFO_0000023"/>
             </Restriction>
         </equivalentClass>
         <onProperty rdf:resource="&obo;BFO_0000053"/>
         <someValuesFrom rdf:resource="&obo;BFO_0000023"/>
+    </Restriction>
+    <Restriction>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000112"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
+            </Restriction>
+        </equivalentClass>
+        <onProperty rdf:resource="&obo;BFO_0000053"/>
+        <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
     </Restriction>
     <Restriction>
         <equivalentClass>
@@ -3029,11 +3146,21 @@ EXAMPLES: my thumb is a proper physical part of my hand, this keyboard is a prop
         <equivalentClass>
             <Restriction>
                 <onProperty rdf:resource="&obo;BFO_0000125"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000034"/>
             </Restriction>
         </equivalentClass>
-        <onProperty rdf:resource="&obo;BFO_0000112"/>
-        <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
+        <onProperty rdf:resource="&obo;BFO_0000085"/>
+        <someValuesFrom rdf:resource="&obo;BFO_0000034"/>
+    </Restriction>
+    <Restriction>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&obo;BFO_0000125"/>
+                <someValuesFrom rdf:resource="&obo;BFO_0000019"/>
+            </Restriction>
+        </equivalentClass>
+        <onProperty rdf:resource="&obo;BFO_0000086"/>
+        <someValuesFrom rdf:resource="&obo;BFO_0000019"/>
     </Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
@@ -3043,19 +3170,9 @@ EXAMPLES: my thumb is a proper physical part of my hand, this keyboard is a prop
             <rdf:Description rdf:about="&obo;BFO_0000147"/>
         </members>
     </rdf:Description>
-    <Restriction>
-        <equivalentClass>
-            <Restriction>
-                <onProperty rdf:resource="&obo;BFO_0000112"/>
-                <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
-            </Restriction>
-        </equivalentClass>
-        <onProperty rdf:resource="&obo;BFO_0000053"/>
-        <someValuesFrom rdf:resource="&obo;BFO_0000016"/>
-    </Restriction>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
 
