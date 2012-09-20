@@ -56,6 +56,23 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DWC_0000023 -->
+
+    <owl:ObjectProperty rdf:about="&obo;DWC_0000023"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -77,6 +94,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000000">
         <rdfs:label xml:lang="en">evidence role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <rdfs:comment>Can come from OBI</rdfs:comment>
     </owl:Class>
     
 
@@ -86,8 +104,12 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000001">
         <rdfs:label xml:lang="en">persistent evidence role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000000"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">false</owl:deprecated>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000115>An evidence role that persists through time.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Could add relation that persistant evidence role is specifically dependent on a museum collection entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Could add relation that persistant evidence role is specifically dependent on a museum material samples.
+
+Deprecated because we do not need this term. Can use OBI:evidence role. Not clear what it means for an evidence role to persist through time.</rdfs:comment>
     </owl:Class>
     
 
@@ -97,6 +119,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000002">
         <rdfs:label xml:lang="en">collecting process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>RW: I think this term is now redundant with material sampling process.</rdfs:comment>
     </owl:Class>
     
 
@@ -106,6 +129,10 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000003">
         <rdfs:label xml:lang="en">observing process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>The information artifact may written or recorded or just be stored in someone&apos;s head (specifically depenedent upon that person).
+
+Question: Is a trip camera capture of a jaguar an observation?</rdfs:comment>
+        <obo:IAO_0000115>A planned process in which a person or machine sees a material entity and that has as output an information content entity about that material entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -115,6 +142,8 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000004">
         <rdfs:label xml:lang="en">being there process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>We can probably deprecate this term.
+</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A process of existing in a particular spatio-temporal region.</obo:IAO_0000115>
     </owl:Class>
     
@@ -123,8 +152,9 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000005 -->
 
     <owl:Class rdf:about="&obo;biocode/biocode_0000005">
-        <rdfs:label xml:lang="en">report</rdfs:label>
+        <rdfs:label xml:lang="en">printed report</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+        <rdfs:comment>This class may be less important for modeling collection data, but could be important for efforts to get hand written (specifically dependent) reports into an electronic (generically dependent) report, and monitoring that process.</rdfs:comment>
     </owl:Class>
     
 
@@ -132,7 +162,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000006 -->
 
     <owl:Class rdf:about="&obo;biocode/biocode_0000006">
-        <rdfs:label xml:lang="en">observational report</rdfs:label>
+        <rdfs:label xml:lang="en">printed observational report</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000056"/>
@@ -140,7 +170,8 @@ Some of the classes in this ontology may be replaced by existing or newly reques
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">A report that depends on a process profile of observing.</obo:IAO_0000115>
+        <rdfs:comment>No more relation inverse depends on. Need to figure out correct relation.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A printed report that inverse depends on a process of observing.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -150,6 +181,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000007">
         <rdfs:label xml:lang="en">selecting process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <obo:IAO_0000115>A planned process by which a person or machine decides that a particular material entity as worthy of collection.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -159,6 +191,8 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000016">
         <rdfs:label xml:lang="en">submitting process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>Examples include a curator submitting a herbarium speciman to a museum, or a researcher submitting a water sample to a laboratory storage collection.</rdfs:comment>
+        <obo:IAO_0000115>A planned process whereby a person submits a material sample to an organization.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -168,6 +202,8 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000021">
         <rdfs:label xml:lang="en">physical extraction process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <obo:IAO_0000115>A planned process that involved removing a material sample from one  site to another. Examples include removing a fish from the ocean with a net, removing dna from cells, picking leaves from a plant.</obo:IAO_0000115>
+        <rdfs:comment>Considered aquisition in OBI, but that is about taking possession. Physical extraction may involve taking pocession, but it may also just involve extraction (e.g. of dna from cells). </rdfs:comment>
     </owl:Class>
     
 
@@ -177,6 +213,25 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000022">
         <rdfs:label xml:lang="en">material sampling process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Use term from OBI</rdfs:comment>
     </owl:Class>
     
 
@@ -186,6 +241,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000023">
         <rdfs:label xml:lang="en">data sampling process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>OBI would classify this as an assay. Use OBI term.</rdfs:comment>
     </owl:Class>
     
 
@@ -195,6 +251,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000024">
         <rdfs:label xml:lang="en">statistical sampling process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>Work with OBI on their treatment of statistical sampling.</rdfs:comment>
     </owl:Class>
     
 
@@ -205,7 +262,9 @@ Some of the classes in this ontology may be replaced by existing or newly reques
         <rdfs:label xml:lang="en">locality description</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="en">An information artifact that is about a spatio-temporal region at which a process (such as collecting process, observing process, or material sampling process) occured.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">The &apos;is about&apos; relation is the property used in the IAO between an information content entity and some other entity. This relation does not exist in BFO. This may be an special case of &apos;has generic dependence at some time&apos;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The &apos;is about&apos; relation is the property used in the IAO between an information content entity and some other entity. This relation does not exist in BFO. This may be an special case of &apos;has generic dependence at some time&apos;.
+
+Someone asked &quot;Why not just use site?&quot; Darwin Core needs to describe both the site and time where some activity occurred as an information content entity (e.g., data from a lab notebook). Should look into whether site is better than spatio-temporal region.</rdfs:comment>
     </owl:Class>
     
 
@@ -215,7 +274,14 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000026">
         <rdfs:label xml:lang="en">material sample role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
-        <obo:IAO_0000115 xml:lang="en">A role that inheres in some material entity as a result of the output of some successful material sampling process.</obo:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A role that inheres in some material entity as a result of the output of some material sampling process.</obo:IAO_0000115>
+        <rdfs:comment>By virtue of the existance of the material sample, we know that the sampling process was successful.</rdfs:comment>
     </owl:Class>
     
 
@@ -225,8 +291,27 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000027">
         <rdfs:label xml:lang="en">successful material sampling process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000022"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000117"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000115 xml:lang="en">A sampling process that has as output some material sample.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Can we say &apos;successful material sampling process realizes material sample role&apos;?</rdfs:comment>
+        <rdfs:comment xml:lang="en">Do not need this class. By virtue of the existance of the material sample, we know that the sampling process was successful.</rdfs:comment>
     </owl:Class>
     
 
@@ -236,7 +321,9 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000028">
         <rdfs:label xml:lang="en">unsuccessful material sampling process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000022"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000115 xml:lang="en">A material sampling process that has as output exactly zero material samples.</obo:IAO_0000115>
+        <rdfs:comment>Do not need this class. By virtue of the absence of the material sample, we know that the sampling process was unsuccessful.</rdfs:comment>
     </owl:Class>
     
 
@@ -252,6 +339,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
                 <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -261,6 +349,7 @@ Some of the classes in this ontology may be replaced by existing or newly reques
     <owl:Class rdf:about="&obo;biocode/biocode_0000030">
         <rdfs:label xml:lang="en">organismal museum collection entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000029"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000115 xml:lang="en">A museum collections entity that derives from an organismal entity,  has a persistent evidence role and &apos;depends on&apos; a process of collecting.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">The label for this on the original diagram was &apos;collection object&apos;. However, not all entities in collections will fit the defition of &apos;object&apos;, so &apos;collection entity is probably a better name.
 
@@ -276,11 +365,11 @@ The relation &apos;depends on&apos; cannot really be used here. Old BFO has &apo
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000110"/>
-                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000029"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000036"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000027"/>
-        <obo:IAO_0000115 xml:lang="en">An oject aggregate that has as part a museum collection entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An oject aggregate that has as part a material sample that is located in museum as a result of a process of curation.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Intent is to document biodiversity. Use for research and education.</rdfs:comment>
     </owl:Class>
     
@@ -297,7 +386,7 @@ The relation &apos;depends on&apos; cannot really be used here. Old BFO has &apo
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000031"/>
-        <obo:IAO_0000115 xml:lang="en">A museum collection that has as part a organismal museum collection entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A museum collection that has as part a organismal material sample.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -307,6 +396,8 @@ The relation &apos;depends on&apos; cannot really be used here. Old BFO has &apo
     <owl:Class rdf:about="&obo;biocode/biocode_0000033">
         <rdfs:label xml:lang="en">institution</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000027"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>Will be replaced by OBI organization. Request institution as synonym.</rdfs:comment>
     </owl:Class>
     
 
@@ -316,6 +407,7 @@ The relation &apos;depends on&apos; cannot really be used here. Old BFO has &apo
     <owl:Class rdf:about="&obo;biocode/biocode_0000034">
         <rdfs:label xml:lang="en">organismal entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000115 xml:lang="en">A material entity that derives from an organism or virus or viroid.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">This class is understood to mean: A material entity that is either an organism, a part of an organism, a collection of organisms, or a fossil.
 
@@ -331,7 +423,7 @@ The relation &apos;organismal entity derives from organism&apos; was in the orig
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
         <rdfs:comment xml:lang="en">This terms will be replaced by a term imported from CARO.
 
-The original diagram only had organsim, but DWC wants to include viruses and viroids.</rdfs:comment>
+The original diagram only had organsim, but DWC and GOs both need to include viruses and viroids.</rdfs:comment>
     </owl:Class>
     
 
@@ -357,7 +449,7 @@ The original diagram only had organsim, but DWC wants to include viruses and vir
 
 Still need to create the relations between material sample role and successful material sampling process.
 
-Submit this to OBI.</rdfs:comment>
+This is already in OBI.</rdfs:comment>
     </owl:Class>
     
 
@@ -377,6 +469,89 @@ Submit this to OBI.</rdfs:comment>
     <owl:Class rdf:about="&obo;biocode/biocode_0000038">
         <rdfs:label xml:lang="en">statistical sample</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000039 -->
+
+    <owl:Class rdf:about="&obo;biocode/biocode_0000039">
+        <rdfs:label xml:lang="en">protocol governed sampling activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;biocode/biocode_0000022"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment>If sampling is a OBI planned process, that captures that it is protocal governed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000042 -->
+
+    <owl:Class rdf:about="&obo;biocode/biocode_0000042">
+        <rdfs:label xml:lang="en">identification process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <obo:IAO_0000115>A process by which a material sample is associated with a taxon.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000043 -->
+
+    <owl:Class rdf:about="&obo;biocode/biocode_0000043">
+        <rdfs:label xml:lang="en">process that yields a material representation of a material entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment xml:lang="en">Includes as output rubbings, casts, photographic prints, audio or video tapes.
+
+Needs a better name. Current name is the definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000044 -->
+
+    <owl:Class rdf:about="&obo;biocode/biocode_0000044">
+        <rdfs:label xml:lang="en">material target of observation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;BFO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;DWC_0000023"/>
+                        <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000001"/>
+        <rdfs:comment>This could either be defined as a material entity that specified input of some observing process OR as a material entity that has a target of observation role. Target of observation role would be defined similarly to material sample role.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A material entity that has a target of observation role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000045 -->
+
+    <owl:Class rdf:about="&obo;biocode/biocode_0000045">
+        <rdfs:label xml:lang="en">process that yields an information artifact that is a representation of a material entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:comment>Includes audio recordings and photographs (which are information artifacts).
+
+Needs a better name. Current name is the definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/biocode/biocode_0000046 -->
+
+    <owl:Class rdf:about="&obo;biocode/biocode_0000046">
+        <rdfs:label xml:lang="en">material target of observation role</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="&obo;biocode/biocode_0000003"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <obo:IAO_0000115>A role that inheres in some material entity as a result of the output of some observing process.</obo:IAO_0000115>
     </owl:Class>
     
 
