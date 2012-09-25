@@ -1,48 +1,60 @@
 @charset "UTF-8";
 /* CSS Document */
 
-ul{margin-top:0;}
-	
-#one-true { 
-    overflow: hidden; 
-    max-width:1200px;
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
 }
 
-#one-true .col, two-true .col {
-    width: 27%;
-    padding: 30px 3.15% 0;
-    float: left;
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-	height: 200px;
-	overflow:auto;
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
 }
 
-#one-true .col:nth-child(1) { margin-left: 33.3%; background: #ccc; }
-#one-true .col:nth-child(2) { margin-left: -66.3%; background: #eee; }
-#one-true .col:nth-child(3) { left: 0; background: #eee; }
-#one-true p { margin-bottom: 30px; } /* Bottom padding on col is busy */
-
-#two-true { 
-    overflow: hidden; 
-    max-width:1200px;
+#topsection{
+background: #fafafa;
+height: 160px; /*Height of top section*/
 }
 
-#two-true .col {
-    width: 27%;
-    padding: 30px 3.15% 0;
-    float: left;
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-	height: 200px;
-	overflow:auto;
+#topsection h1{
+margin: 0;
+padding-top: 15px;
 }
 
-#two-true .col:nth-child(1) { margin-left: 33.3%; background: #eee; }
-#two-true .col:nth-child(2) { margin-left: -66.3%; background: #ccc; }
-#two-true .col:nth-child(3) { left: 0; background: #ccc; }
-#two-true p { margin-bottom: 30px; } /* Bottom padding on col is busy */
+#contentwrapper{
+float: left;
+width: 100%;
+}
 
-body {
-	background-image:url('draft.png');
-	max-width:1200px;}
+#contentcolumn{
+margin-left: 200px; /*Set left margin to LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 200px; /*Width of left column*/
+margin-left: -840px; /*Set left margin to -(MainContainerWidth)*/
+background: #9997FC;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: #fafafa;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
