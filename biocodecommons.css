@@ -31,7 +31,7 @@ width: 100%;
 }
 
 #contentcolumn{
-margin-left: 200px; /*Set left margin to LeftColumnWidth*/
+margin-left: 0px; /*Set left margin to LeftColumnWidth*/
 }
 
 #leftcolumn{
